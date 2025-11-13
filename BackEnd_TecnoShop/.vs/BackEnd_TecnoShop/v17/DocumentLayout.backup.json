@@ -1,0 +1,94 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\kevin\\onedrive\\escritorio\\school\\7mo semestre\\comercio electronico\\e-commerce\\backend_tecnoshop\\backend_tecnoshop\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\app_start\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\kevin\\onedrive\\escritorio\\school\\7mo semestre\\comercio electronico\\e-commerce\\backend_tecnoshop\\backend_tecnoshop\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\controllers\\productoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\kevin\\onedrive\\escritorio\\school\\7mo semestre\\comercio electronico\\e-commerce\\backend_tecnoshop\\backend_tecnoshop\\models\\clsgestorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsgestorproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|c:\\users\\kevin\\onedrive\\escritorio\\school\\7mo semestre\\comercio electronico\\e-commerce\\backend_tecnoshop\\backend_tecnoshop\\models\\clsproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD4D4B2C-46B1-4B91-833F-EB4074730669}|BackEnd_TecnoShop\\BackEnd_TecnoShop.csproj|solutionrelative:backend_tecnoshop\\models\\clsproductos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 329,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ClsProductos.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsProductos.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsProductos.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsProductos.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsProductos.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBsAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:17:03.877Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClsGestorProductos.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Models\\ClsGestorProductos.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAQwIgAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:17:16.268Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\App_Start\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\App_Start\\WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\App_Start\\WebApiConfig.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\App_Start\\WebApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T08:02:47.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductosController.cs",
+              "DocumentMoniker": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
+              "RelativeDocumentMoniker": "BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
+              "ToolTip": "C:\\Users\\kevin\\OneDrive\\Escritorio\\School\\7mo Semestre\\Comercio Electronico\\e-commerce\\BackEnd_TecnoShop\\BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
+              "RelativeToolTip": "BackEnd_TecnoShop\\Controllers\\ProductosController.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAgwC4AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T07:52:25.698Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
