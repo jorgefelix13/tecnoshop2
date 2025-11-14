@@ -11,16 +11,21 @@ namespace BackEnd_TecnoShop.Controllers
     public class ProductosController : ApiController
     {
         // GET: api/Productos
+        [HttpGet]
+        [Route("api/Productos")]
         public IEnumerable<ClsProductos> Get()
         {
             ClsGestorProductos GesProductos = new ClsGestorProductos();
-            return GesProductos.GetProductos();
+            return GesProductos.GetProductos("", "", "");
         }
 
-        // GET: api/Productos/5
-        public string Get(int id)
+        // GET: api/Productos/Filtro?
+        [HttpGet]
+        [Route("api/Productos/Filtro")]
+        public IEnumerable<ClsProductos> GetFiltro(string Categoria = "", string Marca = "", string Nombre = "")
         {
-            return "value";
+            ClsGestorProductos GesProductos = new ClsGestorProductos();
+            return GesProductos.GetProductos(Categoria, Marca, Nombre);
         }
 
         // POST: api/Productos

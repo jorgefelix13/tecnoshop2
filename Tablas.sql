@@ -105,7 +105,7 @@ create table productos(
     pro_stock int not null default 0, 
     pro_catId int foreign key references categorias(cat_id) not null,
     pro_activo bit default 1,
-    pro_marId int foreign key references marcas(mar_id) 
+    pro_marId int foreign key references marcas(mar_id)
 )
 go
 

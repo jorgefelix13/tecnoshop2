@@ -2,7 +2,10 @@
 USE BDTecnoShop
 
 
-CREATE PROC Productos_All
+ALTER PROC Productos_All
+    @Categoria VARCHAR(150) = NULL,
+	@Marca VARCHAR(150) = NULL,
+	@Nombre VARCHAR(150) = NULL
 AS
 BEGIN
 	SELECT 
@@ -16,14 +19,21 @@ BEGIN
 		Cat.cat_nombre AS Categoria,
 		p.pro_activo AS Activo,
 		m.mar_nombre AS Marca,
-		m.mar_logoUrl AS LogoUrl,
+        m.mar_logoUrl AS LogoUrl,
 		pimg.pimg_url AS ImgUrl
 	FROM productos p
-	INNER JOIN productoImagenes pimg ON p.pro_id = pimg.pimg_proId
-	INNER JOIN categorias Cat ON p.pro_catId = Cat.cat_id
-	INNER JOIN marcas m ON p.pro_marId = m.mar_id
+	LEFT JOIN productoImagenes pimg ON p.pro_id = pimg.pimg_proId
+	LEFT JOIN categorias Cat ON p.pro_catId = Cat.cat_id
+	LEFT JOIN marcas m ON p.pro_marId = m.mar_id
+	WHERE
+    (@Nombre IS NULL OR p.pro_nombre LIKE '%' + @Nombre + '%') AND
+    (@Categoria IS NULL OR Cat.cat_nombre LIKE '%' + @Categoria + '%') AND
+    (@Marca IS NULL OR m.mar_nombre LIKE '%' + @Marca + '%')
 	ORDER BY p.pro_id ASC;
 END;
+
+
+exec Productos_All @Nombre = 'Laptop'
 
 ------------------------------------------------------------------------------------------
 

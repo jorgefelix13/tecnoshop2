@@ -12,7 +12,7 @@ namespace BackEnd_TecnoShop.Models
     public class ClsGestorProductos
     {
         string Strconn = ConfigurationManager.ConnectionStrings["BDLocal"].ToString();
-        public List<ClsProductos> GetProductos()
+        public List<ClsProductos> GetProductos(string Categoria = "", string Marca = "", string Nombre = "")
         {
 
             List<ClsProductos> ListProductos = new List<ClsProductos>();
@@ -24,6 +24,23 @@ namespace BackEnd_TecnoShop.Models
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandText = "Productos_ALL";
                 cmd.CommandType = CommandType.StoredProcedure;
+
+                // 👇 Agregar parámetro del filtro
+                if (string.IsNullOrWhiteSpace(Categoria))
+                    cmd.Parameters.AddWithValue("@Categoria", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@Categoria", Categoria);
+                
+                if (string.IsNullOrWhiteSpace(Marca))
+                    cmd.Parameters.AddWithValue("@Marca", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@Marca", Marca);
+                
+                if (string.IsNullOrWhiteSpace(Nombre))
+                    cmd.Parameters.AddWithValue("@Nombre", DBNull.Value);
+                else
+                    cmd.Parameters.AddWithValue("@Nombre", Nombre);
+
                 SqlDataReader r = cmd.ExecuteReader();
 
                 while (r.Read())
@@ -41,8 +58,11 @@ namespace BackEnd_TecnoShop.Models
                     string logoUrl = r.GetString(10);
                     string imgUrl = r.GetString(11);
 
+                    // Convertir string → List<string>
+                    List<string> listaImg = imgUrl.Split(',').ToList();
+
                     ClsProductos productos = new ClsProductos(id, nombre, descripcion, especificaciones,
-                        precioVenta, precioCompra, stock, categoria, activo, marca);
+                        precioVenta, precioCompra, stock, activo, logoUrl, listaImg, categoria, marca);
 
                     ListProductos.Add(productos);
                 }
@@ -68,8 +88,8 @@ namespace BackEnd_TecnoShop.Models
                 cmd.Parameters.AddWithValue("@PrecioVenta", productos.PrecioVenta);
                 cmd.Parameters.AddWithValue("@PrecioCompra", productos.PrecioCompra);
                 cmd.Parameters.AddWithValue("@Stock", productos.Stock);
-                cmd.Parameters.AddWithValue("@CategoriaId", productos.Categoria);
-                cmd.Parameters.AddWithValue("@MarcaId", productos.Marca);
+                cmd.Parameters.AddWithValue("@CategoriaId", productos.CategoriaId);
+                cmd.Parameters.AddWithValue("@MarcaId", productos.MarcaId);
 
                 try
                 {
@@ -103,15 +123,15 @@ namespace BackEnd_TecnoShop.Models
                 cmd.CommandText = "Productos_Update";
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@ProductoId", productos.Id);
+                cmd.Parameters.AddWithValue("@ProductoId", IdProducto);
                 cmd.Parameters.AddWithValue("@Nombre", productos.Nombre);
                 cmd.Parameters.AddWithValue("@Descripcion", productos.Descripcion);
                 cmd.Parameters.AddWithValue("@Especificaciones", productos.Especificaciones);
                 cmd.Parameters.AddWithValue("@PrecioVenta", productos.PrecioVenta);
                 cmd.Parameters.AddWithValue("@PrecioCompra", productos.PrecioCompra);
                 cmd.Parameters.AddWithValue("@Stock", productos.Stock);
-                cmd.Parameters.AddWithValue("@CategoriaId", productos.Categoria);
-                cmd.Parameters.AddWithValue("@MarcaId", productos.Marca);
+                cmd.Parameters.AddWithValue("@CategoriaId", productos.CategoriaId);
+                cmd.Parameters.AddWithValue("@MarcaId", productos.MarcaId);
 
                 try
                 {
