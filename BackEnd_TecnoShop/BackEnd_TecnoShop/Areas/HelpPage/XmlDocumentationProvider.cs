@@ -5,14 +5,13 @@ using System.Reflection;
 using System.Web.Http.Controllers;
 using System.Web.Http.Description;
 using System.Xml.XPath;
-using BackEnd_TecnoShop.Areas.HelpPage.ModelDescriptions;
 
 namespace BackEnd_TecnoShop.Areas.HelpPage
 {
     /// <summary>
     /// A custom <see cref="IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
     /// </summary>
-    public class XmlDocumentationProvider : IDocumentationProvider, IModelDocumentationProvider
+    public class XmlDocumentationProvider : IDocumentationProvider
     {
         private XPathNavigator _documentNavigator;
         private const string TypeExpression = "/doc/members/member[@name='T:{0}']";

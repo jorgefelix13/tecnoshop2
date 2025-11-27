@@ -29,6 +29,8 @@ namespace BackEnd_TecnoShop.Controllers
         }
 
         // POST: api/Productos
+        [HttpPost]
+        [Route("api/Productos/Registrar")]
         public bool Post([FromBody] ClsProductos productos)
         {
             ClsGestorProductos GesProductos = new ClsGestorProductos();
@@ -38,6 +40,8 @@ namespace BackEnd_TecnoShop.Controllers
         }
 
         // PUT: api/Productos/5
+        [HttpPut]
+        [Route("api/Productos/Update")]
         public bool Put(int id, [FromBody] ClsProductos productos)
         {
             ClsGestorProductos GesProductos = new ClsGestorProductos();
@@ -45,7 +49,8 @@ namespace BackEnd_TecnoShop.Controllers
 
             return res;
         }
-
+        [HttpDelete]
+        [Route("api/Productos/Delete")]
         // DELETE: api/Productos/5
         public bool Delete(int id)
         {

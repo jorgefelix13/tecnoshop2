@@ -15,10 +15,10 @@ namespace BackEnd_TecnoShop.Models
         public decimal PrecioCompra { get; set; }
         public int Stock { get; set; }
         public int CategoriaId { get; set; }
-        public string CategoriaNombre { get; set; }
+        public string Categoria { get; set; }
         public bool Activo { get; set; }
         public int MarcaId { get; set; }
-        public string MarcaNombre { get; set; }
+        public string Marca { get; set; }
         public string LogoUrl { get; set; }
         public List<string> ImgUrl { get; set; }
 
@@ -27,8 +27,8 @@ namespace BackEnd_TecnoShop.Models
 
         }
         public ClsProductos(int id, string nombre, string descripcion, string especificaciones,
-            decimal precioVenta, decimal precioCompra, int stock, bool activo, string logoUrl,
-            List<string> imgUrl, string categorianombre, string marcanombre)
+            decimal precioVenta, decimal precioCompra, int stock, int categoriaid, string categorianombre,
+            bool activo, int marcaid, string marcanombre, string logoUrl, List<string> imgUrl)
         {
             Id = id;
             Nombre = nombre;
@@ -37,11 +37,11 @@ namespace BackEnd_TecnoShop.Models
             PrecioVenta = precioVenta;
             PrecioCompra = precioCompra;
             Stock = stock;
-            //CategoriaId = categoriaid;
-            CategoriaNombre = categorianombre;
+            CategoriaId = categoriaid;
+            Categoria = categorianombre;
             Activo = activo;
-            //MarcaId = marcaid;
-            MarcaNombre = marcanombre;
+            MarcaId = marcaid;
+            Marca = marcanombre;
             LogoUrl = logoUrl;
             ImgUrl = imgUrl;
         }
